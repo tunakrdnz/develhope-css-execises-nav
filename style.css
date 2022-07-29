@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 100px 1fr 1fr;
+    background-color: rgb(49, 48, 48);
+    height: 70px;
+    padding: 0 15px;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+.burger-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.nav-left a:hover, .burger-section a:hover {
+    color: rgb(65, 184, 65);
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.dropspan {
+    position: relative;
+    margin-right: 15px;
+}
+
+.dropspan:after {
+    content: "\005E";
+    position: absolute;
+    font-size: 1.3em;
+    font-weight: bold;
+    top: -5px;
+    color: inherit;
+    right: -20px;
+    transform: rotate(180deg);
+ 
+}
+
+button[type="submit"] {
+    border: 1px solid rgb(65, 184, 65);
+    background-color: inherit;
+    color: rgb(65, 184, 65);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: rgb(65, 184, 65);;
+    color: white;
+    transition: all .5s;
+    border: 1px solid white;
+}
+
+input[name="search"] {
+    padding: 11px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: transparent;
+}
+input[name="search"]:focus {
+    outline:1px solid rgb(65, 184, 65);
+}
+
+
+
+
+button:disabled {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+
+.burger {
+    font-size: 25px !important;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px){
+    .nav-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-left, .nav-right {
+        display: none;
+    }
+}
